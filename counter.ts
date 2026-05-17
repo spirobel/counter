@@ -1,6 +1,5 @@
 import { html } from "@spirobel/mininext";
 
-// ── static skeleton html ────────────────────────────────────────────────
 const skeleton = await html`<!DOCTYPE html>
   <html>
     <head>
@@ -35,7 +34,6 @@ const skeleton = await html`<!DOCTYPE html>
 
 let globalCounter = 0;
 
-// ── request handler ─────────────────────────────────────────────────────
 function fetch(req: Request) {
   // increment only on POST (form submit)
   if (req.method === "POST") {
@@ -48,7 +46,6 @@ function fetch(req: Request) {
   );
 }
 
-// ── server ──────────────────────────────────────────────────────────────
 const server = Bun.serve({
   routes: skeleton.static_routes,
   fetch,

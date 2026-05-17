@@ -2,7 +2,7 @@
   "name": "counter",
   "module": "index.ts",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "^1.3.14"
   },
   "peerDependencies": {
     "typescript": "^5"
@@ -10,6 +10,6 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@spirobel/mininext": "^0.8.0"
+    "@spirobel/mininext": "0.8.6"
   }
 }

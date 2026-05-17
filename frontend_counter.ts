@@ -1,6 +1,5 @@
 import { html } from "@spirobel/mininext";
 
-// ── static skeleton html ────────────────────────────────────────────────
 const skeleton = await html`<!DOCTYPE html>
   <html>
     <head>
@@ -27,12 +26,10 @@ const skeleton = await html`<!DOCTYPE html>
     </body>
   </html>`.build();
 
-// ── request handler ─────────────────────────────────────────────────────
 function fetch(req: Request) {
   return new Response(skeleton.fill());
 }
 
-// ── server ──────────────────────────────────────────────────────────────
 const server = Bun.serve({
   routes: skeleton.static_routes,
   fetch,
